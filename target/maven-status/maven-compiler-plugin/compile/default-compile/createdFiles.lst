@@ -1,0 +1,9 @@
+ENTIDADES\Pessoa.class
+ENTIDADES\PessoaFisica.class
+CRUD\GerenciaPFisica.class
+CRUD\GerenciaPJuridica.class
+ENTIDADES\PessoaJuridica.class
+CRUD\Main.class
+ENTIDADES\Fornecedor.class
+contabilidade\Contabilidade.class
+CRUD\GerenciaFornecedor.class
