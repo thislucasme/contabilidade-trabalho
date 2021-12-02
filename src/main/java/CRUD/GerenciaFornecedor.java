@@ -52,7 +52,7 @@ public class GerenciaFornecedor {
         if (frn[pos] != null) {
             System.out.println("-=[Dados]=-");
             System.out.println("Razao Social atual: " + frn[pos].getRazaoSocial());
-            System.out.println("Alterar? (1-sim/2-não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -61,7 +61,7 @@ public class GerenciaFornecedor {
                 frn[pos].setRazaoSocial(RazaoSocial);
             }
             System.out.println("Nome Fantasia Atual: " + frn[pos].getNomeFantasia());
-            System.out.println("Alterar? (1-Sim/2-Não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -79,7 +79,7 @@ public class GerenciaFornecedor {
                 frn[pos].setInscricaoEstadual(inscricaoEstadual);
             }
             System.out.println("C.N.P.J Atual: " + frn[pos].getCnpj());
-            System.out.println("Alterar? (1-Sim/2-Não)");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -89,7 +89,7 @@ public class GerenciaFornecedor {
 
             }
             System.out.println("Email Atual: " + frn[pos].getEmail());
-            System.out.println("Alterar? (1 - Sim/2 - Não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -98,7 +98,7 @@ public class GerenciaFornecedor {
                 frn[pos].setEmail(email);
             }
             System.out.println("Telefone Atual: " + frn[pos].getTelefone());
-            System.out.println("Alterar? (1 - Sim/2 - Não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -111,7 +111,7 @@ public class GerenciaFornecedor {
 
     public void consultar() {
         int pos;
-        System.out.println("--==[Alteração de Fornecedor]==--");
+        System.out.println("--==[Consulta de Fornecedor]==--");
         System.out.println("Qual posição deseja consultar? ");
         pos = sc.nextInt();
         sc.skip("\n");
@@ -137,8 +137,10 @@ public class GerenciaFornecedor {
             if (resp == 1) {
                 frn[pos] = null;
                 System.out.println("Exclusão efetuada!");
+            } else {
+                System.out.println("Exclusão não efetuada!");
             }
-            System.out.println("Exclusão não efetuada!");
+
         }
     }
 

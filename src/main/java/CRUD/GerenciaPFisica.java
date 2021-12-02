@@ -48,7 +48,7 @@ public class GerenciaPFisica {
         if (pesf[pos] != null) {
             System.out.println("-=[Dados]=-");
             System.out.println("Nome atual: " + pesf[pos].getNome());
-            System.out.println("Alterar? (1-sim/2-não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -57,7 +57,7 @@ public class GerenciaPFisica {
                 pesf[pos].setNome(nome);
             }
             System.out.println("C.P.F. Atual: " + pesf[pos].getCpf());
-            System.out.println("Alterar? (1-Sim/2-Não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -66,7 +66,7 @@ public class GerenciaPFisica {
                 pesf[pos].setCpf(cpf);
             }
             System.out.println("Endereço Atual: " + pesf[pos].getEndereco());
-            System.out.println("Alterar? (1-Sim/2-Não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -75,7 +75,7 @@ public class GerenciaPFisica {
                 pesf[pos].setEndereco(endereco);
             }
             System.out.println("Telefone Atual: " + pesf[pos].getTelefone());
-            System.out.println("Alterar? (1-Sim/2-Não)");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -85,7 +85,7 @@ public class GerenciaPFisica {
 
             }
             System.out.println("Rg Atual: " + pesf[pos].getRg());
-            System.out.println("Alterar? (1 - Sim/2 - Não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -98,7 +98,7 @@ public class GerenciaPFisica {
 
     public void consultar() {
         int pos;
-        System.out.println("--==[Alteração de Pessoa Física]==--");
+        System.out.println("--==[Consulta de Pessoa Física]==--");
         System.out.println("Qual posição deseja consultar? ");
         pos = sc.nextInt();
         sc.skip("\n");
@@ -112,20 +112,22 @@ public class GerenciaPFisica {
 
     public void excluir() {
         int pos, resp;
-        System.out.println("--==Excluir==--");
+        System.out.println("--== Excluir ==--");
         System.out.println("Qual posição deseja excluir?");
         pos = sc.nextInt();
         sc.nextInt();
         if (pesf[pos] != null) {
             System.out.println("-=Dados Pessoa Física==--");
             pesf[pos].imprimir();
-            System.out.println("Deseja excluir?");
+            System.out.println("Deseja excluir? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             if (resp == 1) {
                 pesf[pos] = null;
                 System.out.println("Exclusão efetuada!");
+            } else {
+                System.out.println("Exclusão não efetuada!");
             }
-            System.out.println("Exclusão não efetuada!");
+
         }
     }
 

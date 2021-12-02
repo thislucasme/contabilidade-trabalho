@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class GerenciaPJuridica {
 
     Scanner sc;
-    PessoaJuridica pj;
-    private PessoaJuridica pesj[];
+    PessoaJuridica pj;    
+    PessoaJuridica pesj[];
 
     public GerenciaPJuridica(PessoaJuridica pesjs[]) {
         pesj = pesjs;
@@ -38,7 +38,7 @@ public class GerenciaPJuridica {
 
     public void alterarjuridica() {
         int id = 0, pos, resp;
-        String nome, cnpj, endereco, telefone = "";
+        String nome, cnpj, endereco, telefone;
 
         System.out.println("--==[Alteração de Pessoa juridica]==--");
         System.out.println("Qual posição deseja alterar? ");
@@ -47,7 +47,7 @@ public class GerenciaPJuridica {
         if (pesj[pos] != null) {
             System.out.println("-=[Dados]=-");
             System.out.println("Nome atual: " + pesj[pos].getNome());
-            System.out.println("Alterar? (1-sim/2-não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -56,7 +56,7 @@ public class GerenciaPJuridica {
                 pesj[pos].setNome(nome);
             }
             System.out.println("C.N.P.J Atual: " + pesj[pos].getCnpj());
-            System.out.println("Alterar? (1-Sim/2-Não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -65,7 +65,7 @@ public class GerenciaPJuridica {
                 pesj[pos].setCnpj(cnpj);
             }
             System.out.println("Endereço Atual: " + pesj[pos].getEndereco());
-            System.out.println("Alterar? (1-Sim/2-Não");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -74,7 +74,7 @@ public class GerenciaPJuridica {
                 pesj[pos].setEndereco(endereco);
             }
             System.out.println("Telefone Atual: " + pesj[pos].getTelefone());
-            System.out.println("Alterar? (1-Sim/2-Não)");
+            System.out.println("Alterar? (1-SIM/2-NÃO)");
             resp = sc.nextInt();
             sc.skip("\n");
             if (resp == 1) {
@@ -89,7 +89,7 @@ public class GerenciaPJuridica {
 
     public void consultar() {
         int pos;
-        System.out.println("--==[Alteração de Pessoa Juridica]==--");
+        System.out.println("--==[Consulta de Pessoa Juridica]==--");
         System.out.println("Qual posição deseja consultar? ");
         pos = sc.nextInt();
         sc.skip("\n");
@@ -115,8 +115,10 @@ public class GerenciaPJuridica {
             if (resp == 1) {
                 pesj[pos] = null;
                 System.out.println("Exclusão efetuada!");
+            } else {
+                System.out.println("Exclusão não efetuada!");
             }
-            System.out.println("Exclusão não efetuada!");
+
         }
     }
 

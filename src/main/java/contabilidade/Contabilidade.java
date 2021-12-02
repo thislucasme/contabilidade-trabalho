@@ -6,7 +6,6 @@ import CRUD.GerenciaPJuridica;
 import ENTIDADES.Fornecedor;
 import ENTIDADES.PessoaFisica;
 import ENTIDADES.PessoaJuridica;
-import ENTIDADES.Pessoa;
 import java.util.Scanner;
 
 public class Contabilidade {
