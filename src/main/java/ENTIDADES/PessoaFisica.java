@@ -4,8 +4,8 @@ public class PessoaFisica extends Pessoa{
 
     String nome, cpf, endereco, telefone, rg;
 
-    public PessoaFisica(int id, String nome, String endereco, String telefone, String cpf, String rg){
-        super(id, nome, endereco, telefone);
+    public PessoaFisica( String nome, String endereco, String telefone, String cpf, String rg){
+        super(nome, endereco, telefone);
         this.cpf = cpf;
         this.rg = rg;
     }
@@ -28,6 +28,7 @@ public class PessoaFisica extends Pessoa{
 
     
     public void imprimir(){
+        super.imprimir();
          System.out.println("C.P.F. : "+cpf);
     }
 }

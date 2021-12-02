@@ -2,22 +2,14 @@ package ENTIDADES;
 
 public class Pessoa {
     
-    private int id;
     private String nome;
     private String endereco;
     private String telefone;
 
-    public Pessoa(int id, String nome, String endereco, String telefone) {
+    public Pessoa(String nome, String endereco, String telefone) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
-    }
-
-    public int getId(){
-        return id;
-    }
-    public void setId(int id){
-        this.id = id;
     }
     
     public String getNome() {
@@ -44,7 +36,7 @@ public class Pessoa {
         this.telefone = telefone;
     }
     
-    public void imprimir(){        
+    public void imprimir(){ 
         System.out.println("Nome: " + nome);
         System.out.println("Endereço: " + endereco);
         System.out.println("Telefone: " + telefone);

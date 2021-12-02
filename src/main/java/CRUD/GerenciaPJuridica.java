@@ -9,16 +9,14 @@ public class GerenciaPJuridica {
     PessoaJuridica pj;
     private PessoaJuridica pesj[];
 
-    public GerenciaPJuridica(PessoaJuridica pesj[]) {
-        pesj = pesj;
+    public GerenciaPJuridica(PessoaJuridica pesjs[]) {
+        pesj = pesjs;
         sc = new Scanner(System.in);
     }
 
-    
-
     public void cadastrojuridico() {
-        int id = 0, i = 0;
-        String nome, cnpj, endereco, telefone = "";
+        int i = 0;
+        String nome, cnpj, endereco, telefone;
         while ((i < pesj.length) && (pesj[i] != null)) {
             i++;
         }
@@ -40,7 +38,7 @@ public class GerenciaPJuridica {
 
     public void alterarjuridica() {
         int id = 0, pos, resp;
-        String nome, cnpj, endereco, telefone  = "";
+        String nome, cnpj, endereco, telefone = "";
 
         System.out.println("--==[Alteração de Pessoa juridica]==--");
         System.out.println("Qual posição deseja alterar? ");
@@ -85,9 +83,10 @@ public class GerenciaPJuridica {
                 pesj[pos].setTelefone(telefone);
 
             }
-          
+
         }
     }
+
     public void consultar() {
         int pos;
         System.out.println("--==[Alteração de Pessoa Juridica]==--");
@@ -101,6 +100,7 @@ public class GerenciaPJuridica {
             System.out.println(" Pessoa Juridica não existe.");
         }
     }
+
     public void excluir() {
         int pos, resp;
         System.out.println("--==Excluir==--");
@@ -119,6 +119,7 @@ public class GerenciaPJuridica {
             System.out.println("Exclusão não efetuada!");
         }
     }
+
     public void relatorio() {
         int pos = 0;
         System.out.println("--== Relatório de Pessoas Juridica ==--");

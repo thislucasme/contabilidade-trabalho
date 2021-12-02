@@ -1,11 +1,10 @@
-
 package ENTIDADES;
 
-public class Fornecedor  {
-    String RazaoSocial, nomeFantasia, inscricaoEstadual, cnpj, telefone, email;
-   
+public class Fornecedor {
 
-    public Fornecedor(String RazaoSocial, String nomeFantasia, String inscricaoEstadual, String cnpj, 
+    String RazaoSocial, nomeFantasia, inscricaoEstadual, cnpj, telefone, email;
+
+    public Fornecedor(String RazaoSocial, String nomeFantasia, String inscricaoEstadual, String cnpj,
             String telefone, String email) {
         this.RazaoSocial = RazaoSocial;
         this.nomeFantasia = nomeFantasia;
@@ -64,8 +63,14 @@ public class Fornecedor  {
     }
 
     public void imprimir() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        System.out.println("Razão Social: " + RazaoSocial);
+        System.out.println("Nome Fantasia: " + nomeFantasia);
+        System.out.println("Inscrição Estadual: " + inscricaoEstadual);
+        System.out.println("C.N.P.J.: " + cnpj);
+        System.out.println("Telefone: " + telefone);
+        System.out.println("E-mail: " + email);
+
     }
-    
-    
+
 }

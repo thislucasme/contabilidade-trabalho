@@ -16,7 +16,7 @@ public class GerenciaFornecedor {
     }
 
     public void cadastrofornecedor() {
-        int id = 0, i = 0;
+        int i = 0;
         String RazaoSocial, nomeFantasia, inscricaoEstadual, cnpj, telefone, email = "";
         while ((i < frn.length) && (frn[i] != null)) {
             i++;
@@ -42,7 +42,7 @@ public class GerenciaFornecedor {
     }
 
     public void alterarfornedor() {
-        int id = 0, pos, resp;
+        int pos, resp;
         String RazaoSocial, nomeFantasia, inscricaoEstadual, cnpj, email, telefone = "";
 
         System.out.println("--==[Alteração Fornecedor]==--");

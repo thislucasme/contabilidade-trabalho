@@ -1,10 +1,11 @@
 package ENTIDADES;
 
-public class PessoaJuridica {
+public class PessoaJuridica extends Pessoa {
 
     String nome, cnpj, endereco, telefone;
 
     public PessoaJuridica(String nome, String cnpj, String endereco, String telefone) {
+        super(nome, endereco, telefone);
         this.nome = nome;
         this.cnpj = cnpj;
         this.endereco = endereco;
@@ -42,7 +43,9 @@ public class PessoaJuridica {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-public void imprimir(){
-         System.out.println("C.N.P.J : "+cnpj);
+
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("C.N.P.J : " + cnpj);
     }
 }

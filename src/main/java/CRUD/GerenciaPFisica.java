@@ -15,7 +15,7 @@ public class GerenciaPFisica {
     }
 
     public void cadastrofisico() {
-        int id = 0, i = 0;
+        int i = 0;
         String nome, cpf, endereco, telefone, rg = "";
         while ((i < pesf.length) && (pesf[i] != null)) {
             i++;
@@ -30,7 +30,7 @@ public class GerenciaPFisica {
             endereco = sc.nextLine();
             System.out.println("TELEFONE: ");
             telefone = sc.nextLine();
-            pesf[i] = new PessoaFisica(id, nome, endereco, telefone,
+            pesf[i] = new PessoaFisica(nome, endereco, telefone,
                     cpf, rg);
         } else {
             System.out.println("Vetor cheio.");
@@ -38,7 +38,7 @@ public class GerenciaPFisica {
     }
 
     public void alterarfisica() {
-        int id = 0, pos, resp;
+        int pos, resp;
         String nome, cpf, endereco, telefone, rg = "";
 
         System.out.println("--==[Alteração de Pessoa Física]==--");
